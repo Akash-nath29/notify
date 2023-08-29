@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Board</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Notice Board</h1>
+        <ul>
+            {% for notice in notices %}
+            <li>
+                <h3>{{notice.noticename}}</h3>
+                <p>{{notice.body}}</p>
+                <span>{{notice.created_at}}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        <h2>Add Notice</h2>
+        <a href="/add_record">Add New Notice</a>
+    </div>
+</body>
+
+</html>

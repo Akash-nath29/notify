@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Notice</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <center><h2 class="heading">Add New Notice</h2></center>
+    <form action="/add_notice" method="post">
+        <label for="noticename">Notice Heading</label>
+        <input type="text" name="noticename" id="noticename" placeholder="Enter Heading" autocomplete="off">
+        <label for="noticebody">Content</label>
+        <textarea name="noticebody" id="noticebody" cols="100" rows="20" placeholder="Enter Notice Content"></textarea>
+        <input type="submit" value="Add">
+    </form>
+</body>
+
+</html>
